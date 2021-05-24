@@ -1,14 +1,19 @@
 name: Actions Workflow
 
 on:
-  repository_dispatch:
-    types: [build]
-    # schedule:
-   # - cron: "0/5 * * * *"
-    #- cron: "0/6 * * * *"
-    #push:
-  pull_request:
-    types: [closed,assigned,reopened]
+  push:
+    branches:
+      - master
+      - 'feature/*'
+      - 'feature/**'
+  #repository_dispatch:
+  #  types: [build]
+  #   schedule:
+  #  - cron: "0/5 * * * *"
+  #   - cron: "0/6 * * * *"
+  #push:
+  #pull_request:
+  #  types: [closed,assigned,reopened]
 
 
 jobs:
